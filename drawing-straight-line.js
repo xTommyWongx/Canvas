@@ -18,7 +18,6 @@ class DrawingStraightLine extends PaintFunction {
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.coordX, this.coordY);
         this.contextDraft.lineTo(coord[0], coord[1]);
-        // this.contextDraft.closePath();
         this.contextDraft.stroke();
     }
     onMouseMove() {}
@@ -28,7 +27,6 @@ class DrawingStraightLine extends PaintFunction {
         this.contextReal.lineWidth = 5;
         this.clearDraft();
         this.contextReal.lineTo(coord[0], coord[1]);
-        // this.contextReal.closePath();
         this.contextReal.stroke();
     }
     onMouseLeave() {}

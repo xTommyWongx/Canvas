@@ -26,6 +26,7 @@
         <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line" >Straight Line</span>
         <span class="btn btn-info fa fa-circle" id="drawing-circle" >Drawing Circle</span>
         <span class="btn btn-info fa fa-paint-brush" id="drawing-circle-line" >Circle Line</span>
+        <span class="btn btn-danger fa fa-paint-brush" id="eraser" >Eraser</span>
         <span class="btn btn-danger fa fa-paint-brush" id="clear" >Clear</span>
     </div>
 
@@ -41,6 +42,7 @@
     <script type='text/javascript' src="drawing-straight-line.js"></script>
     <script type='text/javascript' src="drawing-circle.js"></script>    
     <script type='text/javascript' src="drawing-circle-line.js"></script>
+    <script type='text/javascript' src="eraser.js"></script>
     <script type='text/javascript' src="clear.js"></script>
 
     <!-- run newly added function -->
@@ -57,14 +59,16 @@
         $('#drawing-circle').click(()=>{
             currentFunction = new DrawingCircle(contextReal,contextDraft);
         });
-        //  -- working on this function today!! -- //
-        // $('#drawing-circle-line').click(()=>{
-        //     currentFunction = new DrawingCircleLine(contextReal, contextDraft);
-        // });
+        $('#drawing-circle-line').click(()=>{
+            currentFunction = new DrawingCircleLine(contextReal, contextDraft);
+        });
+        $('#eraser').click(()=>{
+            currentFunction = new Eraser(contextReal, contextDraft);
+        });
         $('#clear').click(()=>{
             currentFunction = new Clear(contextReal, contextDraft);
-        })
-        currentFunction = new DrawingRectangle(contextReal,contextDraft); 
+        });
+        currentFunction = new DrawingLine(contextReal,contextDraft);
     </script>
 
 </body>

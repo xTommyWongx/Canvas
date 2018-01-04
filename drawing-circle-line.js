@@ -5,8 +5,11 @@ class DrawingCircleLine extends PaintFunction{
         this.contextDraft = contextDraft;
     }
     onMouseDown(coord, event){
-        this.coordX = coord[0];
-        this.coordY = coord[1];
+        this.contextReal.strokeStyle = rgbaColor;
+        this.contextDraft.strokeStyle = rgbaColor;
+        this.contextReal.lineWidth = 1;
+        this.contextDraft.lineWidth = 1;
+
     }
     onDragging(coord, event){
         this.contextDraft.beginPath();

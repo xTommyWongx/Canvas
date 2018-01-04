@@ -16,10 +16,21 @@
 </head>
 
 <body>
+    <!-- canvas -->
     <div id="canvas-container">
         <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
         <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
     </div>
+    
+    <!-- color picker -->
+    <label for="color-input" id="color-label" style="background-color: red"></label>  
+    <input type="checkbox" id="color-input" checked></input>
+    <div id="color-picker">
+      <canvas id="color-block" height="150" width="150"></canvas>
+      <canvas id="color-strip" height="150" width="30"></canvas>
+    </div>
+
+    <!-- drawing buttons -->
     <div class="buttons">
         <span class="btn btn-info fa fa-square" id="drawing-rectangle" >Drawing Rectangle</span>
         <span class="btn btn-info fa fa-paint-brush" id="drawing-line" >Drawing Line</span>
@@ -44,8 +55,9 @@
     <script type='text/javascript' src="drawing-circle-line.js"></script>
     <script type='text/javascript' src="eraser.js"></script>
     <script type='text/javascript' src="clear.js"></script>
+    <script type='text/javascript' src="picker.js"></script>
 
-    <!-- run newly added function -->
+    <!-- buttons function -->
     <script type='text/javascript'>
         $('#drawing-rectangle').click(()=>{
             currentFunction = new DrawingRectangle(contextReal,contextDraft);
@@ -70,8 +82,5 @@
         });
         currentFunction = new DrawingLine(contextReal,contextDraft);
     </script>
-
 </body>
-
-
 </html>

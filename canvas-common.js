@@ -31,7 +31,6 @@ $('#canvas-draft').mouseleave(function(e){
     let mouseY = e.pageY - this.offsetTop;
     currentFunction.onMouseLeave([mouseX,mouseY],e);
 });
-
 $('#canvas-draft').mouseenter(function(e){
     let mouseX = e.pageX - this.offsetLeft;
     let mouseY = e.pageY - this.offsetTop;

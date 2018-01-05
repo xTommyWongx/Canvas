@@ -4,7 +4,17 @@ let canvasDraft = document.getElementById('canvas-draft');
 let contextDraft = canvasDraft.getContext('2d');
 let currentFunction;
 let dragging = false;
+let lineSize;
 
+// set line width
+$('#line-width').click(()=>{
+    lineSize = $('#line-width').val();
+})
+$('#line-width').keyup(()=>{
+    lineSize = $('#line-width').val();    
+})
+
+//set canvas mouse function
 $('#canvas-draft').mousedown(function(e){
     let mouseX = e.pageX - this.offsetLeft;
     let mouseY = e.pageY - this.offsetTop;

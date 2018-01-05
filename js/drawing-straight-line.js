@@ -13,7 +13,7 @@ class DrawingStraightLine extends PaintFunction {
     onDragging(coord, event) {
         this.contextDraft.strokeStyle = rgbaColor;
         this.contextDraft.lineJoin = "round";
-        this.contextDraft.lineWidth = 5;
+        this.contextDraft.lineWidth = lineSize;
         this.clearDraft();
         this.contextDraft.beginPath();
         this.contextDraft.moveTo(this.coordX, this.coordY);
@@ -24,7 +24,7 @@ class DrawingStraightLine extends PaintFunction {
     onMouseUp(coord) {
         this.contextReal.strokeStyle = rgbaColor;
         this.contextReal.lineJoin = "round";
-        this.contextReal.lineWidth = 5;
+        this.contextReal.lineWidth = lineSize;
         this.clearDraft();
         this.contextReal.lineTo(coord[0], coord[1]);
         this.contextReal.stroke();

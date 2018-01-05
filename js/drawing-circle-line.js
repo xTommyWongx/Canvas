@@ -7,8 +7,8 @@ class DrawingCircleLine extends PaintFunction{
     onMouseDown(coord, event){
         this.contextReal.strokeStyle = rgbaColor;
         this.contextDraft.strokeStyle = rgbaColor;
-        this.contextReal.lineWidth = 1;
-        this.contextDraft.lineWidth = 1;
+        this.contextReal.lineWidth = lineSize;
+        this.contextDraft.lineWidth = lineSize;
 
     }
     onDragging(coord, event){

@@ -1,7 +1,7 @@
 class DrawingLine extends PaintFunction{
     constructor(contextReal){
         super();
-        this.context = contextReal;            
+        this.context = contextReal;
     }
     
     onMouseDown(coord,event){

@@ -2,6 +2,7 @@ class Eraser extends PaintFunction{
     constructor(context){
         super();
         this.context = context;            
+        $('#line-width').show();
     }
     onMouseDown(coord,event){
         this.context.beginPath();

@@ -3,6 +3,7 @@ class DrawingStraightLine extends PaintFunction {
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
+        $('#line-width').show();
     }
     onMouseDown(coord, event) {
         this.coordX = coord[0];

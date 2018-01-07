@@ -2,6 +2,7 @@ class DrawingLine extends PaintFunction{
     constructor(contextReal){
         super();
         this.context = contextReal;
+        $('#line-width').show();
     }
     onMouseDown(coord,event){
         this.context.strokeStyle = rgbaColor;

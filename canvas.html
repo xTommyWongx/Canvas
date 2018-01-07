@@ -39,9 +39,9 @@
         <span class="btn btn-info fa fa-paint-brush" id="drawing-circle-line" >Circle Line</span>
         <span class="btn btn-danger fa fa-paint-brush" id="eraser" >Eraser</span>
         <span class="btn btn-danger fa fa-paint-brush" id="clear" >Clear</span>
-        <form>
+        <form id="line-width">
             Size:
-            <input type="number" id="line-width" name="size" min='1' max='100'>
+            <input type="number" name="size" min='1' max='100' value="1">
         </form>
     </div>
 
@@ -53,8 +53,8 @@
     <!-- functional plugin javascript file -->
     <script type='text/javascript' src="js/canvas-common.js"></script>
     <script type='text/javascript' src="js/drawing-line.js"></script>
-    <script type='text/javascript' src="js/drawing-rectangle.js"></script>
     <script type='text/javascript' src="js/drawing-straight-line.js"></script>
+    <script type='text/javascript' src="js/drawing-rectangle.js"></script>
     <script type='text/javascript' src="js/drawing-circle.js"></script>    
     <script type='text/javascript' src="js/drawing-circle-line.js"></script>
     <script type='text/javascript' src="js/eraser.js"></script>
@@ -63,6 +63,7 @@
 
     <!-- buttons function -->
     <script type='text/javascript'>
+    $(function(){
         $('#drawing-rectangle').click(()=>{
             currentFunction = new DrawingRectangle(contextReal,contextDraft);
         });
@@ -85,6 +86,7 @@
             currentFunction = new Clear(contextReal, contextDraft);
         });
         currentFunction = new DrawingLine(contextReal,contextDraft);
+    })
     </script>
 
 </body>

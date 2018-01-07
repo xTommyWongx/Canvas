@@ -6,12 +6,13 @@ let currentFunction;
 let dragging = false;
 let lineSize;
 
+
 // set line width
 $('#line-width').click(()=>{
-    lineSize = $('#line-width').val();
+    lineSize = $('#line-width input').val();
 })
 $('#line-width').keyup(()=>{
-    lineSize = $('#line-width').val();    
+    lineSize = $('#line-width input').val();    
 })
 
 //set canvas mouse function

@@ -38,7 +38,7 @@
         <span class="btn btn-info fa fa-circle" id="drawing-circle" >Drawing Circle</span>
         <span class="btn btn-info fa fa-circle" id="drawing-ellipse" >Drawing Ellipse</span>
         <span class="btn btn-info fa fa-paint-brush" id="drawing-circle-line" >Circle Line</span>
-        <!-- <span class="btn btn-info fa fa-paint-brush" id="no-break-line" >no break line</span> -->
+        <span class="btn btn-info fa fa-paint-brush" id="drawing-no-line-break" >No Line Break</span>
         <span class="btn btn-danger fa fa-paint-brush" id="eraser" >Eraser</span>
         <span class="btn btn-danger fa fa-paint-brush" id="clear" >Clear</span>
         <span class="btn btn-danger fa fa-save" id="save">Save</span>
@@ -61,7 +61,7 @@
     <script type='text/javascript' src="js/drawing-circle.js"></script>    
     <script type='text/javascript' src="js/drawing-ellipse.js"></script>    
     <script type='text/javascript' src="js/drawing-circle-line.js"></script>
-    <!-- <script type='text/javascript' src="js/drawing-no-break-line.js"></script>     -->
+    <script type='text/javascript' src="js/drawing-no-line-break.js"></script>    
     <script type='text/javascript' src="js/eraser.js"></script>
     <script type='text/javascript' src="js/clear.js"></script>
     <script type='text/javascript' src="js/picker.js"></script>
@@ -88,9 +88,9 @@
         $('#drawing-circle-line').click(()=>{
             currentFunction = new DrawingCircleLine(contextReal, contextDraft);
         });
-        // $('#no-break-line').click(()=>{
-        //     currentFunction = new DrawingNoBreakLine(contextReal,contextDraft);
-        // });
+        $('#drawing-no-line-break').click(()=>{
+            currentFunction = new DrawingNoLineBreak(contextReal,contextDraft);
+        });
         $('#eraser').click(()=>{
             currentFunction = new Eraser(contextReal, contextDraft);
         });

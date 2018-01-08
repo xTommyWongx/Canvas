@@ -36,7 +36,9 @@
         <span class="btn btn-info fa fa-paint-brush" id="drawing-line" >Drawing Line</span>
         <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line" >Straight Line</span>
         <span class="btn btn-info fa fa-circle" id="drawing-circle" >Drawing Circle</span>
+        <span class="btn btn-info fa fa-circle" id="drawing-ellipse" >Drawing Ellipse</span>
         <span class="btn btn-info fa fa-paint-brush" id="drawing-circle-line" >Circle Line</span>
+        <!-- <span class="btn btn-info fa fa-paint-brush" id="no-break-line" >no break line</span> -->
         <span class="btn btn-danger fa fa-paint-brush" id="eraser" >Eraser</span>
         <span class="btn btn-danger fa fa-paint-brush" id="clear" >Clear</span>
         <form id="line-width">
@@ -56,7 +58,9 @@
     <script type='text/javascript' src="js/drawing-straight-line.js"></script>
     <script type='text/javascript' src="js/drawing-rectangle.js"></script>
     <script type='text/javascript' src="js/drawing-circle.js"></script>    
+    <script type='text/javascript' src="js/drawing-ellipse.js"></script>    
     <script type='text/javascript' src="js/drawing-circle-line.js"></script>
+    <!-- <script type='text/javascript' src="js/drawing-no-break-line.js"></script>     -->
     <script type='text/javascript' src="js/eraser.js"></script>
     <script type='text/javascript' src="js/clear.js"></script>
     <script type='text/javascript' src="js/picker.js"></script>
@@ -76,9 +80,15 @@
         $('#drawing-circle').click(()=>{
             currentFunction = new DrawingCircle(contextReal,contextDraft);
         });
+        $('#drawing-ellipse').click(()=>{
+            currentFunction = new DrawingEllipse(contextReal,contextDraft);
+        });
         $('#drawing-circle-line').click(()=>{
             currentFunction = new DrawingCircleLine(contextReal, contextDraft);
         });
+        // $('#no-break-line').click(()=>{
+        //     currentFunction = new DrawingNoBreakLine(contextReal,contextDraft);
+        // });
         $('#eraser').click(()=>{
             currentFunction = new Eraser(contextReal, contextDraft);
         });

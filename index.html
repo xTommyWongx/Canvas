@@ -16,37 +16,42 @@
 </head>
 
 <body>
-    <!-- canvas -->
-    <div id="canvas-container">
-        <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
-        <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
-    </div>
-    
-    <!-- color picker -->
-    <label for="color-input" id="color-label" style="background-color: red"></label>  
-    <input type="checkbox" id="color-input" checked></input>
-    <div id="color-picker">
-      <canvas id="color-block" height="150" width="150"></canvas>
-      <canvas id="color-strip" height="150" width="30"></canvas>
+    <div class="outer">
+        <!-- drawing buttons -->
+        <div class="buttons-wrapper">
+            <span class="btn btn-success fa fa-pencil fa-2x" id="drawing-line" title="Pencil"></span>
+            <span class="btn btn-success fa fa-minus fa-2x" id="drawing-straight-line" title="Straight-Line"></span>
+            <span class="btn btn-success fa fa-chevron-up fa-2x" id="drawing-no-line-break" title="Line"></span>
+            <span class="btn btn-success fa fa-link fa-2x" id="drawing-circle-line" title="Chain-Line"></span>
+            <span class="btn btn-warning fa fa-square fa-2x" id="drawing-rectangle" title="Rectangle"></span>
+            <span class="btn btn-warning fa fa-circle-thin fa-2x" id="drawing-circle" title="Circle"></span>
+            <span class="btn btn-warning fa fa-circle fa-2x" id="drawing-ellipse" title="Ellipse"></span>
+            <span class="btn btn-danger fa fa-eraser fa-2x" id="eraser" title="Eraser"></span>
+            <span class="btn btn-danger fa fa-paint-brush fa-2x" id="clear" title="Clear"></span>
+            <span class="btn btn-info fa fa-save fa-2x" id="save" title="Save"></span>
+            <form id="line-width">
+                Size:
+                <input type="number" name="size" min='1' max='100' value="1">
+            </form>
+            
+            <!-- color picker -->
+            <label for="color-input" title="Color Picker" id="color-label" style="background-color: red"></label>  
+            <input type="checkbox" id="color-input" unchecked></input>
+            
+            <div id="color-picker" >
+                <canvas id="color-block" height="150" width="150"></canvas>
+                <canvas id="color-strip" height="150" width="30"></canvas>
+            </div>
+            
+        </div>
+        
+        <!-- canvas -->
+        <div id="canvas-container">
+            <canvas id="canvas-real" class="canvas" width='100%' height='500px'></canvas>
+            <canvas id="canvas-draft" class="canvas" width='100%' height='500px'></canvas>
+        </div>
     </div>
 
-    <!-- drawing buttons -->
-    <div class="buttons">
-        <span class="btn btn-info fa fa-square" id="drawing-rectangle" >Drawing Rectangle</span>
-        <span class="btn btn-info fa fa-paint-brush" id="drawing-line" >Drawing Line</span>
-        <span class="btn btn-info fa fa-paint-brush" id="drawing-straight-line" >Straight Line</span>
-        <span class="btn btn-info fa fa-circle" id="drawing-circle" >Drawing Circle</span>
-        <span class="btn btn-info fa fa-circle" id="drawing-ellipse" >Drawing Ellipse</span>
-        <span class="btn btn-info fa fa-paint-brush" id="drawing-circle-line" >Circle Line</span>
-        <span class="btn btn-info fa fa-paint-brush" id="drawing-no-line-break" >No Line Break</span>
-        <span class="btn btn-danger fa fa-paint-brush" id="eraser" >Eraser</span>
-        <span class="btn btn-danger fa fa-paint-brush" id="clear" >Clear</span>
-        <span class="btn btn-danger fa fa-save" id="save">Save</span>
-        <form id="line-width">
-            Size:
-            <input type="number" name="size" min='1' max='100' value="1">
-        </form>
-    </div>
 
     <!-- jQuery -->
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>

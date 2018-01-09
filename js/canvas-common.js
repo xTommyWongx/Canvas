@@ -14,6 +14,8 @@ $('#line-width').keyup(()=>{
     lineSize = $('#line-width input').val();    
 })
 
+
+
 // set canvas mouse function
 $('#canvas-draft').mousedown(function(e){
     let mouseX = e.pageX - this.offsetLeft;

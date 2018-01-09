@@ -3,10 +3,7 @@ class DrawingRectangle extends PaintFunction{
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
-        // $('#line-width').hide();
-        $('#drawing-circle').click(function(){
-            $('#line-width').css("visibility", "hidden");
-        });
+        $('#line-width').hide();
     }
     onMouseDown(coord,event){
         this.contextReal.fillStyle = rgbaColor;

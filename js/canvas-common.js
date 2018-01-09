@@ -6,6 +6,7 @@ let currentFunction;
 let dragging = false;
 let lineSize;
 
+
 // set line width
 $('#line-width').click(()=>{
     lineSize = $('#line-width input').val();
@@ -13,8 +14,6 @@ $('#line-width').click(()=>{
 $('#line-width').keyup(()=>{
     lineSize = $('#line-width input').val();    
 })
-
-
 
 // set canvas mouse function
 $('#canvas-draft').mousedown(function(e){
@@ -57,4 +56,4 @@ class PaintFunction{
     onMouseUp(){}
     onMouseLeave(){}
     onMouseEnter(){}
-}    
+}
